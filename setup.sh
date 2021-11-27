@@ -31,7 +31,7 @@ rbenv install 2.7.5
 rbenv global 2.7.5
 
 # Ruby Gems
-gem install nokogiri sqlite3
+gem install -N rubocop solargraph nokogiri sqlite3
 
 # Docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
