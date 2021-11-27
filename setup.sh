@@ -14,7 +14,7 @@ echo 'export PATH="$HOME/go/bin:$PATH"' >> ~/.bashrc
 
 # Node.js with nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-source ~/.bashrc
+source ~/.nvm/nvm.sh
 nvm install --lts
 
 # Ruby with rbenv
