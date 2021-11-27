@@ -23,10 +23,8 @@ cd ~/.rbenv
 src/configure
 make -C src
 cd ~
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init - bash)"' >> ~/.bashrc
-PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - bash)"
+eval $(echo 'export PATH="$HOME/.rbenv/bin:$PATH"' | tee -a ~/.bashrc)
+eval $(echo 'eval "$(rbenv init - bash)"' | tee -a ~/.bashrc)
 mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 rbenv install 2.7.5
