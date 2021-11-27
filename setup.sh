@@ -24,7 +24,6 @@ src/configure
 make -C src
 cd ~
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-~/.rbenv/bin/rbenv init
 echo 'eval "$(rbenv init - bash)"' >> ~/.bashrc
 eval "$(~/.rbenv/bin/rbenv init - bash)"
 mkdir -p "$(rbenv root)"/plugins
