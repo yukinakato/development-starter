@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 # Essentials
 sudo apt -y install curl git build-essential sqlite3 libsqlite3-dev zlib1g-dev libssl-dev ca-certificates gnupg lsb-release
 
