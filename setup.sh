@@ -49,3 +49,5 @@ ResultAny=no
 ResultInactive=no
 ResultActive=yes
 EOF
+
+echo Setup finished.
