@@ -49,6 +49,11 @@ ResultAny=no
 ResultInactive=no
 ResultActive=yes
 EOF
+cat <<EOF > ~/.xsessionrc
+export DESKTOP_SESSION=ubuntu
+export GNOME_SHELL_SESSION_MODE=ubuntu
+export XDG_CURRENT_DESKTOP=ubuntu:GNOME
+EOF
 
 cat <<EOF
 *******************
