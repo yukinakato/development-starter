@@ -50,4 +50,8 @@ ResultInactive=no
 ResultActive=yes
 EOF
 
-echo Setup finished.
+cat <<EOF
+*******************
+* Setup finished. *
+*******************
+EOF
