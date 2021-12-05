@@ -38,3 +38,14 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
 sudo apt -y install docker-ce docker-ce-cli containerd.io
+
+# xrdp
+sudo apt -y install xrdp
+sudo tee /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla <<EOF
+[Allow Colord all Users]
+Identity=unix-user:*
+Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
+EOF
