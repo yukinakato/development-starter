@@ -54,6 +54,10 @@ export DESKTOP_SESSION=ubuntu
 export GNOME_SHELL_SESSION_MODE=ubuntu
 export XDG_CURRENT_DESKTOP=ubuntu:GNOME
 EOF
+sudo tee -a /etc/pam.d/xrdp-sesman <<EOF
+auth optional pam_gnome_keyring.so
+session optional pam_gnome_keyring.so auto_start
+EOF
 
 cat <<EOF
 *******************
