@@ -60,6 +60,26 @@ auth optional pam_gnome_keyring.so
 session optional pam_gnome_keyring.so auto_start
 EOF
 
+# xrdp audio support
+sudo apt -y install m4 libtool libcap-dev libsndfile1-dev libspeexdsp-dev libudev-dev libdbus-1-dev libpulse-dev
+PULSEAUDIO_VERSION=$(pulseaudio --version | awk '{print $2}')
+cd ~
+wget https://freedesktop.org/software/pulseaudio/releases/pulseaudio-$PULSEAUDIO_VERSION.tar.gz
+tar xf pulseaudio-$PULSEAUDIO_VERSION.tar.gz
+cd pulseaudio-$PULSEAUDIO_VERSION
+./configure
+cd ~
+git clone https://github.com/neutrinolabs/pulseaudio-module-xrdp.git
+cd pulseaudio-module-xrdp
+./bootstrap
+./configure PULSE_DIR=~/pulseaudio-$PULSEAUDIO_VERSION
+make
+sudo make install
+cd ~
+rm pulseaudio-$PULSEAUDIO_VERSION.tar.gz
+rm -rf pulseaudio-$PULSEAUDIO_VERSION
+rm -rf pulseaudio-module-xrdp
+
 cat <<EOF
 *******************
 * Setup finished. *
