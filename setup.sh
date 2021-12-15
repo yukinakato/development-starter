@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -eu
+cd ~
 
 # Essentials
 sudo apt update
