@@ -44,11 +44,19 @@ sudo apt -y install docker-ce docker-ce-cli containerd.io
 # xrdp
 sudo apt -y install xrdp
 sudo tee /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla <<EOF
-[Allow Colord all Users]
+[Allow Colord All Users]
 Identity=unix-user:*
 Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile
 ResultAny=no
 ResultInactive=no
+ResultActive=yes
+EOF
+sudo tee /etc/polkit-1/localauthority/50-local.d/46-allow-update.pkla <<EOF
+[Allow Update All Users]
+Identity=unix-user:*
+Action=org.debian.apt.update-cache
+ResultAny=yes
+ResultInactive=yes
 ResultActive=yes
 EOF
 cat <<EOF > ~/.xsessionrc
