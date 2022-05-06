@@ -11,11 +11,11 @@ sudo apt -y install curl git build-essential sqlite3 libsqlite3-dev zlib1g-dev l
 # done by build-essential
 
 # Go
-wget -qO- https://go.dev/dl/go1.17.3.linux-amd64.tar.gz | tar xz -C ~/
+wget -qO- https://go.dev/dl/go1.18.1.linux-amd64.tar.gz | tar xz -C ~/
 eval $(echo 'export PATH="$HOME/go/bin:$PATH"' | tee -a ~/.bashrc)
 
 # Node.js with nvm
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.nvm/nvm.sh
 nvm install --lts
 
@@ -29,8 +29,8 @@ eval $(echo 'export PATH="$HOME/.rbenv/bin:$PATH"' | tee -a ~/.bashrc)
 eval $(echo 'eval "$(rbenv init - bash)"' | tee -a ~/.bashrc)
 mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
-rbenv install 2.7.5
-rbenv global 2.7.5
+rbenv install 2.7.6
+rbenv global 2.7.6
 
 # Ruby Gems
 gem install -N rubocop solargraph nokogiri sqlite3
