@@ -5,6 +5,7 @@ cd ~
 
 # Essentials
 sudo apt update
+sudo apt -y upgrade
 sudo apt -y install curl git build-essential sqlite3 libsqlite3-dev zlib1g-dev libssl-dev
 
 # C
@@ -38,6 +39,12 @@ gem install -N rubocop solargraph nokogiri sqlite3
 # git config
 git config --global core.quotepath false
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
+
+# set default user for imported environment
+sudo tee /etc/wsl.conf <<EOF
+[user]
+default=$(whoami)
+EOF
 
 cat <<EOF
 *******************

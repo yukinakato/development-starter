@@ -12,6 +12,19 @@ wget -qO- https://raw.githubusercontent.com/yukinakato/development-starter/maste
 wget -qO- https://raw.githubusercontent.com/yukinakato/development-starter/master/setup.sh | bash
 ```
 
+## Remote Desktop into WSL
+
+```sh
+sudo apt -y install xrdp xfce4
+echo xfce4-session > ~/.xsession
+```
+
+Edit `/etc/xrdp/xrdp.ini` to change port.
+
+```sh
+sudo service start xrdp
+```
+
 ## References
 
 ### Git Credential Management on WSL
