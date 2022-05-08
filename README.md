@@ -25,6 +25,13 @@ Edit `/etc/xrdp/xrdp.ini` to change port.
 sudo service xrdp start
 ```
 
+To start **xrdp** automatically, add these lines to `/etc/wsl.conf`.
+
+```sh
+[boot]
+command=service xrdp start
+```
+
 ## References
 
 ### Git Credential Management on WSL
