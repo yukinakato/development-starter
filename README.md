@@ -22,7 +22,7 @@ echo xfce4-session > ~/.xsession
 Edit `/etc/xrdp/xrdp.ini` to change port.
 
 ```sh
-sudo service start xrdp
+sudo service xrdp start
 ```
 
 ## References
