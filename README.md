@@ -25,7 +25,7 @@ Edit `/etc/xrdp/xrdp.ini` to change port.
 sudo service xrdp start
 ```
 
-To start **xrdp** automatically, add these lines to `/etc/wsl.conf`.
+To start **xrdp** automatically on Windows 11, add these lines to `/etc/wsl.conf`.
 
 ```sh
 [boot]

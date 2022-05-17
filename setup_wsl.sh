@@ -6,7 +6,7 @@ cd ~
 # Essentials
 sudo apt update
 sudo apt -y upgrade
-sudo apt -y install curl git build-essential sqlite3 libsqlite3-dev zlib1g-dev libssl-dev
+sudo apt -y install curl git build-essential sqlite3 libsqlite3-dev zlib1g-dev libssl-dev fonts-noto
 
 # C
 # done by build-essential
