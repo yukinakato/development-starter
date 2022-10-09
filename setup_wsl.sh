@@ -36,6 +36,17 @@ rbenv global 2.7.6
 # Ruby Gems
 gem install -N rubocop solargraph nokogiri sqlite3
 
+# startship
+curl -sS https://starship.rs/install.sh | sh -s -- -y
+echo 'eval "$(starship init bash)"' >> ~/.bashrc
+cat <<EOF > ~/.config/starship.toml
+[directory]
+truncation_length = 20
+truncate_to_repo = false
+truncation_symbol = "…🌀…/"
+home_symbol = "🏠"
+EOF
+
 # git config
 git config --global core.quotepath false
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
