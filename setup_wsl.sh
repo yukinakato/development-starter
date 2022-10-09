@@ -2,6 +2,7 @@
 
 set -eu
 cd ~
+mkdir -p ~/.config
 
 # Essentials
 sudo apt update
