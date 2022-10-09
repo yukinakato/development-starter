@@ -36,7 +36,7 @@ rbenv global 2.7.6
 # Ruby Gems
 gem install -N rubocop solargraph nokogiri sqlite3
 
-# startship
+# starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 echo 'eval "$(starship init bash)"' >> ~/.bashrc
 cat <<EOF > ~/.config/starship.toml
