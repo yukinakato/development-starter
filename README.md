@@ -48,5 +48,5 @@ command=service xrdp start
 
   ```text
   /etc/xrdp/xrdp.ini
-  port=tcp://.:3389
+  port=tcp://.:33890
   ```
