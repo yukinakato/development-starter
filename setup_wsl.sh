@@ -50,7 +50,7 @@ EOF
 
 # git config
 git config --global core.quotepath false
-git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe"
 
 # set default user for imported environment
 sudo tee /etc/wsl.conf <<EOF
