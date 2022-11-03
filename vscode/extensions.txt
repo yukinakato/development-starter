@@ -31,4 +31,5 @@ oderwat.indent-rainbow
 ritwickdey.LiveServer
 ryu1kn.partial-diff
 svelte.svelte-vscode
+unifiedjs.vscode-mdx
 wix.vscode-import-cost
