@@ -52,10 +52,13 @@ EOF
 git config --global core.quotepath false
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe"
 
-# set default user for imported environment
+# set DrvFs option and default user for imported environment
 sudo tee /etc/wsl.conf <<EOF
+[automount]
+options = "metadata,fmask=177,dmask=077"
+
 [user]
-default=$(whoami)
+default = $(whoami)
 EOF
 
 cat <<EOF
