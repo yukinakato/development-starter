@@ -55,7 +55,7 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git
 # set DrvFs option and default user for imported environment
 sudo tee /etc/wsl.conf <<EOF
 [automount]
-options = "metadata,fmask=177,dmask=077"
+options = "metadata,umask=077"
 
 [user]
 default = $(whoami)
