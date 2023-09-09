@@ -7,7 +7,7 @@ mkdir -p ~/.config
 # Essentials
 sudo apt update
 sudo apt -y upgrade
-sudo apt -y install curl git build-essential sqlite3 libsqlite3-dev zlib1g-dev libssl-dev fonts-noto
+sudo apt -y install curl git build-essential sqlite3 libsqlite3-dev zlib1g-dev libssl-dev fonts-noto libyaml-dev
 
 # C
 # done by build-essential
@@ -31,8 +31,8 @@ eval $(echo 'export PATH="$HOME/.rbenv/bin:$PATH"' | tee -a ~/.bashrc)
 eval $(echo 'eval "$(rbenv init - bash)"' | tee -a ~/.bashrc)
 mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
-rbenv install 2.7.6
-rbenv global 2.7.6
+rbenv install 3.1.2
+rbenv global 3.1.2
 
 # Ruby Gems
 gem install -N rubocop solargraph nokogiri sqlite3
