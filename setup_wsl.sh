@@ -13,8 +13,8 @@ sudo apt -y install curl git build-essential sqlite3 libsqlite3-dev zlib1g-dev l
 # done by build-essential
 
 # Go
-wget -qO- https://go.dev/dl/go1.18.1.linux-amd64.tar.gz | tar xz -C ~/
-eval $(echo 'export PATH="$HOME/go/bin:$PATH"' | tee -a ~/.bashrc)
+wget -qO- https://go.dev/dl/go1.22.1.linux-amd64.tar.gz | sudo tar xz -C /usr/local
+eval $(echo 'export PATH="/usr/local/go/bin:$PATH"' | tee -a ~/.bashrc)
 
 # Node.js with nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
